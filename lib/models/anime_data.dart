@@ -26,7 +26,7 @@ const animeList = [
     genre: 'Экшен, Приключения',
     year: 2002,
     rating: 8.3,
-    imagePath: 'assets/images/anime3.jp',
+    imagePath: 'assets/images/anime3.jpg',
   ),
   Anime(
     title: 'One Piece',

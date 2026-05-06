@@ -1,17 +1,38 @@
-# anime_catalog
+# Лабораторная работа №4: Flutter — Списки, модели данных и карточки
 
-A new Flutter project.
+**Студент:** SDA
+**Группа:** ISP-232 
+**Дата сдачи:** 06.05.2026
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📝 Описание работы
 
-A few resources to get you started if this is your first Flutter project:
+В данной лабораторной работе было разработано мобильное приложение-каталог на фреймворке Flutter. Основной целью было изучение принципов работы со списками данных, создание переиспользуемых виджетов и правильная архитектура хранения данных.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Приложение представляет собой каталог аниме (или другой выбранной тематики), где каждый элемент отображается в виде красивой карточки с постером, названием, рейтингом и описанием.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Что было изучено
+
+В ходе выполнения работы я освоил следующие ключевые концепции Flutter:
+
+1.  **Модели данных (Data Models):** Научился создавать Dart-классы для структурированного хранения информации (название, год, рейтинг, путь к изображению) и использовать `const` конструкторы для оптимизации памяти.
+2.  **Эффективные списки (ListView.builder):** Понял разницу между `Column` и `ListView.builder`. Изучил принцип виртуализации списков, когда виджеты создаются только для видимых элементов, что критично для производительности при больших объемах данных.
+3.  **Переиспользуемые виджеты (Custom Widgets):** Разбил интерфейс на мелкие компоненты (`AnimeCard`, `_buildPoster`, `_buildInfo`), что сделало код чистым, читаемым и легко поддерживаемым.
+4.  **Работа с ресурсами (Assets):** Научился подключать локальные изображения через `pubspec.yaml` и отображать их с помощью виджета `Image.asset` с параметром `BoxFit.cover`.
+5.  **Интерактивность и UI:** Реализовал обработку нажатий через `InkWell` с эффектом волны (Ripple Effect) и отображение всплывающих уведомлений (`SnackBar`) при клике на карточку. Также настроил `AppBar` с динамическим счетчиком элементов.
+
+## 📸 Скриншоты приложения
+
+### Основной экран (Каталог)
+![Скриншот приложения](img/step4_SDA.png)
+
+
+## 📂 Структура проекта
+
+*   `lib/models/anime.dart` — Класс модели данных.
+*   `lib/models/anime_data.dart` — Список данных (константы).
+*   `lib/anime_card.dart` — Виджет отдельной карточки аниме.
+*   `lib/anime_list.dart` — Экран со списком (`ListView.builder`).
+*   `lib/main.dart` — Точка входа в приложение и настройка темы.
+*   `assets/images/` — Папка с изображениями постеров.
